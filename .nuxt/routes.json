@@ -1,0 +1,37 @@
+[
+  {
+    "name": "acerca-de",
+    "path": "/acerca-de",
+    "component": "C:\\\\Users\\\\Carev\\\\Desktop\\\\7°Semestre\\\\TBD\\\\ejemplos\\\\tbdplantilla-vue-nuxt\\\\pages\\\\acerca-de.vue",
+    "chunkName": "pages/acerca-de",
+    "_name": "_1c080ce5"
+  },
+  {
+    "name": "lista",
+    "path": "/lista",
+    "component": "C:\\\\Users\\\\Carev\\\\Desktop\\\\7°Semestre\\\\TBD\\\\ejemplos\\\\tbdplantilla-vue-nuxt\\\\pages\\\\lista.vue",
+    "chunkName": "pages/lista",
+    "_name": "_40330007"
+  },
+  {
+    "name": "lista-componente",
+    "path": "/lista-componente",
+    "component": "C:\\\\Users\\\\Carev\\\\Desktop\\\\7°Semestre\\\\TBD\\\\ejemplos\\\\tbdplantilla-vue-nuxt\\\\pages\\\\lista-componente.vue",
+    "chunkName": "pages/lista-componente",
+    "_name": "_8ec73384"
+  },
+  {
+    "name": "nuevo",
+    "path": "/nuevo",
+    "component": "C:\\\\Users\\\\Carev\\\\Desktop\\\\7°Semestre\\\\TBD\\\\ejemplos\\\\tbdplantilla-vue-nuxt\\\\pages\\\\nuevo.vue",
+    "chunkName": "pages/nuevo",
+    "_name": "_66e1b53b"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\Carev\\\\Desktop\\\\7°Semestre\\\\TBD\\\\ejemplos\\\\tbdplantilla-vue-nuxt\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_58f985d6"
+  }
+]
