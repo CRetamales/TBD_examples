@@ -1,48 +1,75 @@
 <template>
-<div class="container">
-    <h1>Agregar un perro</h1>
-    <form>
-        <div class="form-item">
-            <label for="name">Nombre</label>
-            <input type="text" id="name" v-model="newDog.name">
-        </div>
-        <div>
-            <button type="button" @click="send" class="main">Crear</button>
-        </div>
-        <div class="info">
-            <h2>Objeto</h2>
-            <code>{{newDog}}</code>
-            <p class="message">
-                {{message}}
-            </p>
-        </div>
-    </form>
+    <div class="container">
+        <h1>Agregar un Manga</h1>
+        <form>
+            <div class="form-item">
+                <label for="title">Titulo</label>
+                <input type="text" id="title" v-model="newManga.title">
+                <label for="author">Autor</label>
+                <input type="text" id="author" v-model="newManga.author">
+                <label for="chapter">Capitulo</label>
+                <input type="text" id="chapter" v-model="newManga.chapter">
+                <label for="category">Categorias</label>
+                <input type="text" id="category" v-model="newManga.category"> <!-- cambiar aqui por algun seleccionador multiple -->
+                <label for="edit">Editorial</label>
+                <input type="text" id="edit" v-model="newManga.edit">
+                <label for="leng">Idioma</label>
+                <input type="text" id="leng" v-model="newManga.leng">
+                <label for="pages">Hojas</label>
+                <input type="text" id="pages" v-model="newManga.pages">
+                <label for="price">Precio</label>
+                <input type="text" id="price" v-model="newManga.price">
+            </div>
+            <div>
+                <button type="button" @click="send" class="main">Imprimir</button>
+            </div>
+            <div class="info">
+                <h2>Objeto</h2>
+                <code>{{newManga}}</code>
+                <p class="message">
+                    {{message}}
+                </p>
+            </div>
+        </form>
 
-</div>
+    </div>
 </template>
 <script>
+function checkNulls(obj){
+    console.log("b");
+    console.log(obj);
+    for (var c in obj){
+        if (obj[c] != null && obj[c] != ""){
+            return true;
+        }
+    }
+    return false;
+}
 export default {
     data(){
         return{
             message:'',
-            newDog:{}
+            newManga:{}
         }
     },
     methods:{
         send:async function(){
             this.message = '';
+            console.log("a");
             //validaciones de formulario
-            if (this.newDog.name == ''){
-                this.message = 'Debes ingresar un nombre'
+            if (checkNulls(this.newManga)){
+                print("A");
+                this.message = 'Debe completar todos los campos.';
                 return false
             }
             //envío de datos del formulario
+            console.log("a");
             try {
-                var result = await this.$axios.post('/dogs', this.newDog);
-                let dog = result.data;
+                var result = await this.$axios.post('/mangas', this.newManga);
+                let manga = result.data;
                 //mensaje de exito 
-                this.message = `Se creó un nuevo perro con id: ${dog.id}`;
-                this.newDog = {};
+                this.message = `Se creó un nuevo perro con id: ${manga.id}`;
+                this.newManga = {};
             } catch (error) {
                 //mensaje de error
                 console.log('error', error)

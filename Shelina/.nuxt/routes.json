@@ -2,36 +2,36 @@
   {
     "name": "acerca-de",
     "path": "/acerca-de",
-    "component": "C:\\\\Users\\\\Carev\\\\Desktop\\\\7°Semestre\\\\TBD\\\\ejemplos\\\\tbdplantilla-vue-nuxt\\\\pages\\\\acerca-de.vue",
+    "component": "C:\\\\Users\\\\littl\\\\Desktop\\\\TBD\\\\TBD_examples\\\\Shelina\\\\pages\\\\acerca-de.vue",
     "chunkName": "pages/acerca-de",
-    "_name": "_1c080ce5"
+    "_name": "_5f547fd5"
   },
   {
     "name": "lista",
     "path": "/lista",
-    "component": "C:\\\\Users\\\\Carev\\\\Desktop\\\\7°Semestre\\\\TBD\\\\ejemplos\\\\tbdplantilla-vue-nuxt\\\\pages\\\\lista.vue",
+    "component": "C:\\\\Users\\\\littl\\\\Desktop\\\\TBD\\\\TBD_examples\\\\Shelina\\\\pages\\\\lista.vue",
     "chunkName": "pages/lista",
-    "_name": "_40330007"
+    "_name": "_060e6af7"
   },
   {
     "name": "lista-componente",
     "path": "/lista-componente",
-    "component": "C:\\\\Users\\\\Carev\\\\Desktop\\\\7°Semestre\\\\TBD\\\\ejemplos\\\\tbdplantilla-vue-nuxt\\\\pages\\\\lista-componente.vue",
+    "component": "C:\\\\Users\\\\littl\\\\Desktop\\\\TBD\\\\TBD_examples\\\\Shelina\\\\pages\\\\lista-componente.vue",
     "chunkName": "pages/lista-componente",
-    "_name": "_8ec73384"
+    "_name": "_10e5c54e"
   },
   {
     "name": "nuevo",
     "path": "/nuevo",
-    "component": "C:\\\\Users\\\\Carev\\\\Desktop\\\\7°Semestre\\\\TBD\\\\ejemplos\\\\tbdplantilla-vue-nuxt\\\\pages\\\\nuevo.vue",
+    "component": "C:\\\\Users\\\\littl\\\\Desktop\\\\TBD\\\\TBD_examples\\\\Shelina\\\\pages\\\\nuevo.vue",
     "chunkName": "pages/nuevo",
-    "_name": "_66e1b53b"
+    "_name": "_2cbd202b"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\Carev\\\\Desktop\\\\7°Semestre\\\\TBD\\\\ejemplos\\\\tbdplantilla-vue-nuxt\\\\pages\\\\index.vue",
+    "component": "C:\\\\Users\\\\littl\\\\Desktop\\\\TBD\\\\TBD_examples\\\\Shelina\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_58f985d6"
+    "_name": "_1ed4f0c6"
   }
 ]

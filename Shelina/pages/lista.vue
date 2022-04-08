@@ -26,7 +26,7 @@ export default {
         //Función asíncrona para consultar los datos
         getData: async function(){
             try {
-                let response = await this.$axios.get('/dogs');
+                let response = await this.$axios.get('/mangas');
                 this.items  = response.data;
                 console.log(response)
             } catch (error) {
