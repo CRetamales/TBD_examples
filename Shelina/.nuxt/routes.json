@@ -1,37 +1,32 @@
 [
   {
-    "name": "acerca-de",
-    "path": "/acerca-de",
-    "component": "C:\\\\Users\\\\littl\\\\Desktop\\\\TBD\\\\TBD_examples\\\\Shelina\\\\pages\\\\acerca-de.vue",
-    "chunkName": "pages/acerca-de",
-    "_name": "_5f547fd5"
-  },
-  {
     "name": "lista",
     "path": "/lista",
-    "component": "C:\\\\Users\\\\littl\\\\Desktop\\\\TBD\\\\TBD_examples\\\\Shelina\\\\pages\\\\lista.vue",
-    "chunkName": "pages/lista",
-    "_name": "_060e6af7"
+    "component": "C:\\\\Users\\\\littl\\\\OneDrive\\\\Desktop\\\\TBD\\\\TBD_examples\\\\Shelina\\\\pages\\\\lista.vue",
+    "chunkName": "pages/lista"
   },
   {
     "name": "lista-componente",
     "path": "/lista-componente",
-    "component": "C:\\\\Users\\\\littl\\\\Desktop\\\\TBD\\\\TBD_examples\\\\Shelina\\\\pages\\\\lista-componente.vue",
-    "chunkName": "pages/lista-componente",
-    "_name": "_10e5c54e"
+    "component": "C:\\\\Users\\\\littl\\\\OneDrive\\\\Desktop\\\\TBD\\\\TBD_examples\\\\Shelina\\\\pages\\\\lista-componente.vue",
+    "chunkName": "pages/lista-componente"
+  },
+  {
+    "name": "nosotros",
+    "path": "/nosotros",
+    "component": "C:\\\\Users\\\\littl\\\\OneDrive\\\\Desktop\\\\TBD\\\\TBD_examples\\\\Shelina\\\\pages\\\\nosotros.vue",
+    "chunkName": "pages/nosotros"
   },
   {
     "name": "nuevo",
     "path": "/nuevo",
-    "component": "C:\\\\Users\\\\littl\\\\Desktop\\\\TBD\\\\TBD_examples\\\\Shelina\\\\pages\\\\nuevo.vue",
-    "chunkName": "pages/nuevo",
-    "_name": "_2cbd202b"
+    "component": "C:\\\\Users\\\\littl\\\\OneDrive\\\\Desktop\\\\TBD\\\\TBD_examples\\\\Shelina\\\\pages\\\\nuevo.vue",
+    "chunkName": "pages/nuevo"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\littl\\\\Desktop\\\\TBD\\\\TBD_examples\\\\Shelina\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_1ed4f0c6"
+    "component": "C:\\\\Users\\\\littl\\\\OneDrive\\\\Desktop\\\\TBD\\\\TBD_examples\\\\Shelina\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
   }
 ]

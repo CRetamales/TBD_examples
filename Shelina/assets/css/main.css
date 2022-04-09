@@ -1,3 +1,5 @@
+
+
 :root{
   --main-color:#1121EF;
   --dark-color:#232E98;
@@ -11,7 +13,7 @@
 body {
   font-family: sans-serif;
   padding: 10px;
-  background: #f1f1f1;
+  background: linear-gradient(to bottom, rgb(5, 5, 5), rgb(189, 5, 17));
   margin:0;
   padding: 0;
 }

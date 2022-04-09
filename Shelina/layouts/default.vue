@@ -4,7 +4,7 @@
       <nav><!-- Enlaces de navegación-->
         <ul>
           <li>
-            <a href="/lista">Lista</a>
+            <a href="/lista">Mangas</a>
           </li>
           <li>
             <a href="/nuevo">Nuevo</a>
@@ -13,7 +13,7 @@
             <a href="/lista-componente">Lista Comp.</a>
           </li>
           <li>
-            <a href="/acerca-de">Acerca de</a>
+            <a href="/nosotros">Nosotros</a>
           </li>
         </ul>
       </nav>
@@ -43,6 +43,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  color: white;
 }
 
 *,
@@ -55,22 +56,22 @@ html {
 .button--green {
   display: inline-block;
   border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
+  border: 1px solid #23cda6;
+  color: #2bba99;
   text-decoration: none;
   padding: 10px 30px;
 }
 
 .button--green:hover {
   color: #fff;
-  background-color: #3b8070;
+  background-color: #00ffc3;
 }
 
 .button--grey {
   display: inline-block;
   border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
+  border: 1px solid #0852a1;
+  color: #0e6cd1;
   text-decoration: none;
   padding: 10px 30px;
   margin-left: 15px;
@@ -78,6 +79,6 @@ html {
 
 .button--grey:hover {
   color: #fff;
-  background-color: #35495e;
+  background-color: #0e6cd1;
 }
 </style>
