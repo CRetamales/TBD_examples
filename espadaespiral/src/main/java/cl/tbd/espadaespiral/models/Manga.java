@@ -1,4 +1,4 @@
-package cl.tbd.espadaespiral.entity;
+package cl.tbd.espadaespiral.models;
 
 public class Manga {
     //ATRIBUTOS DE LA ENTIDAD MANGA 
