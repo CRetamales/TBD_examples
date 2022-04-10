@@ -1,17 +1,17 @@
-package cl.tbd.espadaespiral;
+package cl.tbd.ejemplo2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import cl.tbd.espadaespiral.repositories.DatabaseContext;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 import org.sql2o.Sql2oException;
+import cl.tbd.ejemplo2.repositories.DatabaseContext;
 
 @SpringBootApplication
-public class EspadaespiralApplication {
+public class Ejemplo2Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EspadaespiralApplication.class, args);
+		SpringApplication.run(Ejemplo2Application.class, args);
 		Sql2o base = DatabaseContext.sql2o();
 		try{
 			Connection con = base.open();
@@ -19,7 +19,8 @@ public class EspadaespiralApplication {
 		}
 		catch(Sql2oException e){
 			System.out.println("no funciona");
-		}	
+		}
+		
 	}
 
 }
