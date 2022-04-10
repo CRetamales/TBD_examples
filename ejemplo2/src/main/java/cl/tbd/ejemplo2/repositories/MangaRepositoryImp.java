@@ -19,52 +19,98 @@ public class MangaRepositoryImp implements MangaRepository {
     public int countMangas(){
         int total = 0;
         String sql = "SELECT COUNT(*) FROM manga";
-        try (Connection conn = sql2o.open()){
+        try (Connection conn = sql2o.open()) {
             total = conn.createQuery(sql).executeScalar(Integer.class);
+            return total;
         }
-        return total;
     }
 
 
     @Override
-    public void createManga(){
+    public List<Manga> getAll() {
+        try(Connection conn = sql2o.open()){
+            return conn.createQuery("SELECT * FROM manga ORDER BY manga.nombremanga ASC")
+                    .executeAndFetch(Manga.class);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+
+    
+    @Override
+    public List<Manga> showMangaByName(String nombremanga) {
+        try(Connection conn = sql2o.open()){
+            return conn.createQuery("SELECT * FROM manga WHERE manga.nombremanga = :nombremanga")
+                    .addParameter("nombremanga", nombremanga)
+                    .executeAndFetch(Manga.class);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+    
+
+    @Override
+    public List<Manga> showMangaById(long id){
+        try(Connection conn = sql2o.open()){
+            return conn.createQuery("SELECT * FROM manga WHERE manga.id = :id")
+                    .addParameter("id", id)
+                    .executeAndFetch(Manga.class);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    } 
+    
+
+    @Override
+    public void createManga(Manga manga){
         Connection conn = sql2o.open();
 
-        String SQL_INSERT = "INSERT INTO 'manga', ('NombreManga', 'AutorManga', 'CategoriaManga', 'EditorialManga', 'IdiomaManga', 'CapituloManga', 'NumeroPaginas', 'PrecioManga')" + 
+        String SQL_INSERT = "INSERT INTO manga(nombremanga, autormanga, categoriamanga, editorialmanga, idiomamanga, capitulomanga, numeropaginas, preciomanga)" + 
                             "VALUES(:nombre, :autor, :categoria, :editorial, :idioma, :capitulo, :paginas, :precio)";
 
         try{
-
-            Manga manga1 = new Manga("Naruto", "Masashi Kishimoto", "Accion", "Norma", "Español", 10, 40, 14990);
-
-
             conn.createQuery(SQL_INSERT, true)
-                    .addParameter("nombre", manga1.getNombreManga())
-                    .addParameter("autor", manga1.getAutorManga())
-                    .addParameter("categoria", manga1.getCategoriaManga())
-                    .addParameter("editorial", manga1.getEditorialManga())
-                    .addParameter("idioma", manga1.getIdiomaManga())
-                    .addParameter("capitulo", manga1.getCapituloManga())
-                    .addParameter("paginas", manga1.getNumeroPaginas())
-                    .addParameter("precio", manga1.getPrecioManga())
+                    .addParameter("nombre", manga.getNombreManga())
+                    .addParameter("autor", manga.getAutorManga())
+                    .addParameter("categoria", manga.getCategoriaManga())
+                    .addParameter("editorial", manga.getEditorialManga())
+                    .addParameter("idioma", manga.getIdiomaManga())
+                    .addParameter("capitulo", manga.getCapituloManga())
+                    .addParameter("paginas", manga.getNumeroPaginas())
+                    .addParameter("precio", manga.getPrecioManga())
                     .executeUpdate();
-
-            System.out.println("ID Manga 01: ");
 
         } finally {
             conn.close();
         }
     }
+
+    
+    @Override 
+    public void deleteMangaByName(String nombremanga){
+        Connection conn = sql2o.open();
+        String SQL_DELETE = "DELETE FROM manga WHERE manga.nombremanga = :nombremanga";
+
+        try{
+            conn.createQuery(SQL_DELETE).addParameter("nombremanga", nombremanga).executeUpdate();
+
+        } finally {
+            conn.close();
+        }
+    }
+    
 
 
     @Override 
-    public void deleteManga(){
+    public void deleteMangaById(long id){
         Connection conn = sql2o.open();
-        String SQL_DELETE = "DELETE FROM manga WHERE id = :id";
+        String SQL_DELETE = "DELETE FROM manga WHERE manga.id = :id";
 
         try{
-            conn.createQuery(SQL_DELETE, true)
-                    .executeUpdate();
+            conn.createQuery(SQL_DELETE).addParameter("id", id).executeUpdate();
 
         } finally {
             conn.close();
@@ -72,66 +118,35 @@ public class MangaRepositoryImp implements MangaRepository {
     }
 
 
+    /*
     @Override
-    public void readManga(){
+    public void updateMangaByName(String nombremanga){
         Connection conn = sql2o.open();
 
-        final String SQL_FIND_BY_ID = "SELECT * FROM 'manga' WHERE id = :id";
-        final String SQL_FIND_ALL = "SELECT * FROM 'manga'";
+        Object manga = conn.createQuery("SELECT * FROM manga WHERE manga.nombremanga = :nombremanga");
 
-        try{
-            List<Manga> MangaList = conn.createQuery(SQL_FIND_ALL)
-                                                    .addColumnMapping("id", "id")
-                                                    .executeAndFetch(Manga.class);
-            for (Manga manga : MangaList) {
-                System.out.println(manga);
+        if(sql != null){
+
+            String SQL_UPDATE = "UPDATE manga SET manga.nombremanga = :nombremanga, manga.autormanga = :autor, manga.categoriamanga = :categoria, manga.editorialmanga = :editorial, manga.idiomamanga = :idioma, manga.capitulomanga = :capitulo, manga.numeropaginas = :paginas, manga.preciomanga = :precio WHERE manga.nombremanga = :nombremanga";
+
+            try{
+                conn.createQuery(SQL_UPDATE)
+                        .addParameter("nombremanga", nombremanga)
+                        .addParameter("autor", autormanga)
+                        .addParameter("categoria", manga.getCategoriaManga())
+                        .addParameter("editorial", manga.getEditorialManga())
+                        .addParameter("idioma", manga.getIdiomaManga())
+                        .addParameter("capitulo", manga.getCapituloManga())
+                        .addParameter("paginas", manga.getNumeroPaginas())
+                        .addParameter("precio", manga.getPrecioManga())
+                        .executeUpdate();
+
+            } finally {
+                conn.close();
             }
 
-            Manga foundManga = conn.createQuery(SQL_FIND_BY_ID)
-                                               .addColumnMapping("id", "id")
-                                               .addParameter("id", 1)
-                                               .executeAndFetchFirst(Manga.class);
-
-            System.out.println(foundManga);
-        } finally {
-            conn.close();
         }
-    }
 
-
-
-    @Override
-    public void updateManga(){
-        Connection conn = sql2o.open();
-
-        String SQL_UPDATE = "UPDATE 'manga' " +
-                                                " SET 'NombreManga' = :nombre, " +
-                                                " 'AutorManga' = :autor, " +
-                                                " 'CategoriaManga' = :categoria, " +
-                                                " 'EditorialManga' = :editorial " +
-                                                " 'IdiomaManga' = :idioma " +
-                                                " 'CapituloManga' = :capitulo " +
-                                                " 'NumeroPaginas' = :numero " +
-                                                " 'PrecioManga' = :precio " +
-                                                " WHERE 'id' = :id";
-
-        try{
-            Manga manga1 = new Manga("Naruto", "Masashi Kishimoto", "Accion", "Norma", "Español", 10, 40, 14990);
-
-            conn.createQuery(SQL_UPDATE, true)
-                    .addParameter("nombre", manga1.getNombreManga())
-                    .addParameter("autor", manga1.getAutorManga())
-                    .addParameter("categoria", manga1.getCategoriaManga())
-                    .addParameter("editorial", manga1.getEditorialManga())
-                    .addParameter("idioma", manga1.getIdiomaManga())
-                    .addParameter("capitulo", manga1.getCapituloManga())
-                    .addParameter("numero", manga1.getNumeroPaginas())
-                    .addParameter("precio", manga1.getPrecioManga())
-                    .executeUpdate();
-
-        } finally {
-            conn.close();
-        }
-    }
+    }   */
 
 }

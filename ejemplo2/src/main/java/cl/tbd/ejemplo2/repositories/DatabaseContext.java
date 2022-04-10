@@ -6,8 +6,6 @@ import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 import org.sql2o.Sql2oException;
 
-import java.util.*;
-
 @Configuration
 public class DatabaseContext {
   @Bean
@@ -21,9 +19,10 @@ public class DatabaseContext {
     for(i=0;i<6;i++){
 
       try{
-        Sql2o base = new Sql2o("jdbc:postgresql://localhost:5432/MangaDB",usuarios[i],contraseñas[i]);
+        Sql2o base = new Sql2o("jdbc:postgresql://localhost:5433/MangaDB",usuarios[i],contraseñas[i]);
         Connection conn = base.open();
         return base;
+
       }
       catch(Sql2oException e){
         if(i>=6){

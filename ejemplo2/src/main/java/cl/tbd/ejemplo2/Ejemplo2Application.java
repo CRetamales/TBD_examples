@@ -1,7 +1,5 @@
 package cl.tbd.ejemplo2;
 
-
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.sql2o.Connection;
@@ -18,6 +16,7 @@ public class Ejemplo2Application {
 		try{
 			Connection conn = base.open();
 			System.out.println("si funciona");
+
         }
 		catch(Sql2oException e){
 			System.out.println("no funciona");
