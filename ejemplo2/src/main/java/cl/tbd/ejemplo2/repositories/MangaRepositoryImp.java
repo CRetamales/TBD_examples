@@ -1,8 +1,10 @@
 package cl.tbd.ejemplo2.repositories;
 
-import cl.tbd.ejemplo2.models.Manga;
+import cl.tbd.ejemplo2.Models.Manga;
 import org.sql2o.Sql2o;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.sql2o.Connection;
 
 @Repository
@@ -28,13 +30,15 @@ public class MangaRepositoryImp implements MangaRepository {
     public void createManga(){
         Connection conn = sql2o.open();
 
-        final String SQL_INSERT = "INSERT INTO 'manga', ('NombreManga', 'AutorManga', 'CategoriaManga', 'EditorialManga', 'IdiomaManga', 'CapituloManga', 'NumeroPaginas', 'PrecioManga')" + 
+        String SQL_INSERT = "INSERT INTO 'manga', ('NombreManga', 'AutorManga', 'CategoriaManga', 'EditorialManga', 'IdiomaManga', 'CapituloManga', 'NumeroPaginas', 'PrecioManga')" + 
                             "VALUES(:nombre, :autor, :categoria, :editorial, :idioma, :capitulo, :paginas, :precio)";
 
         try{
+
             Manga manga1 = new Manga("Naruto", "Masashi Kishimoto", "Accion", "Norma", "Español", 10, 40, 14990);
 
-            Object insertedId = conn.createQuery(SQL_INSERT, true)
+
+            conn.createQuery(SQL_INSERT, true)
                     .addParameter("nombre", manga1.getNombreManga())
                     .addParameter("autor", manga1.getAutorManga())
                     .addParameter("categoria", manga1.getCategoriaManga())
@@ -43,10 +47,9 @@ public class MangaRepositoryImp implements MangaRepository {
                     .addParameter("capitulo", manga1.getCapituloManga())
                     .addParameter("paginas", manga1.getNumeroPaginas())
                     .addParameter("precio", manga1.getPrecioManga())
-                    .executeUpdate()
-                    .getKey();
+                    .executeUpdate();
 
-            System.out.println("ID Manga 01: " + insertedId);
+            System.out.println("ID Manga 01: ");
 
         } finally {
             conn.close();
@@ -57,10 +60,10 @@ public class MangaRepositoryImp implements MangaRepository {
     @Override 
     public void deleteManga(){
         Connection conn = sql2o.open();
+        String SQL_DELETE = "DELETE FROM manga WHERE id = :id";
 
         try{
             conn.createQuery(SQL_DELETE, true)
-                    .addParameter("id", 1)
                     .executeUpdate();
 
         } finally {
@@ -84,7 +87,7 @@ public class MangaRepositoryImp implements MangaRepository {
                 System.out.println(manga);
             }
 
-            Manga foundManga = conn.createQuery(SQL_FIND_BY_ID )
+            Manga foundManga = conn.createQuery(SQL_FIND_BY_ID)
                                                .addColumnMapping("id", "id")
                                                .addParameter("id", 1)
                                                .executeAndFetchFirst(Manga.class);
@@ -101,7 +104,7 @@ public class MangaRepositoryImp implements MangaRepository {
     public void updateManga(){
         Connection conn = sql2o.open();
 
-        final String SQL_UPDATE = "UPDATE 'manga' " +
+        String SQL_UPDATE = "UPDATE 'manga' " +
                                                 " SET 'NombreManga' = :nombre, " +
                                                 " 'AutorManga' = :autor, " +
                                                 " 'CategoriaManga' = :categoria, " +
@@ -115,7 +118,7 @@ public class MangaRepositoryImp implements MangaRepository {
         try{
             Manga manga1 = new Manga("Naruto", "Masashi Kishimoto", "Accion", "Norma", "Español", 10, 40, 14990);
 
-            conn.createQuery(SQL_INSERT, true)
+            conn.createQuery(SQL_UPDATE, true)
                     .addParameter("nombre", manga1.getNombreManga())
                     .addParameter("autor", manga1.getAutorManga())
                     .addParameter("categoria", manga1.getCategoriaManga())

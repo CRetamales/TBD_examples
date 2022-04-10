@@ -1,4 +1,4 @@
-package cl.tbd.ejemplo2.repositories
+package cl.tbd.ejemplo2.repositories;
 
 public interface MangaRepository {
 

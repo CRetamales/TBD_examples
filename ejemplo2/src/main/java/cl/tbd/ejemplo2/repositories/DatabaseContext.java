@@ -22,7 +22,7 @@ public class DatabaseContext {
 
       try{
         Sql2o base = new Sql2o("jdbc:postgresql://localhost:5432/MangaDB",usuarios[i],contraseñas[i]);
-        Connection con = base.open();
+        Connection conn = base.open();
         return base;
       }
       catch(Sql2oException e){

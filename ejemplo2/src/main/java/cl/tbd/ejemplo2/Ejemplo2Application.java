@@ -8,7 +8,6 @@ import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 import org.sql2o.Sql2oException;
 import cl.tbd.ejemplo2.repositories.DatabaseContext;
-import cl.tbd.modelos.Manga;
 
 @SpringBootApplication
 public class Ejemplo2Application {
@@ -17,9 +16,8 @@ public class Ejemplo2Application {
 		SpringApplication.run(Ejemplo2Application.class, args);
 		Sql2o base = DatabaseContext.sql2o();
 		try{
-			Connection con = base.open();
+			Connection conn = base.open();
 			System.out.println("si funciona");
-
         }
 		catch(Sql2oException e){
 			System.out.println("no funciona");

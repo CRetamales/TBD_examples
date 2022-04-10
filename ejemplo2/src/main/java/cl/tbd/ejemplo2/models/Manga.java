@@ -1,4 +1,4 @@
-package cl.tbd.ejemplo2.models;
+package cl.tbd.ejemplo2.Models;
 
 public class Manga {
     //ATRIBUTOS DE LA ENTIDAD MANGA 
