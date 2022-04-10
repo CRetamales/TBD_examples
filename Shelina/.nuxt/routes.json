@@ -3,30 +3,35 @@
     "name": "acerca-de",
     "path": "/acerca-de",
     "component": "C:\\\\Users\\\\littl\\\\OneDrive\\\\Desktop\\\\TBD\\\\TBD_examples\\\\Shelina\\\\pages\\\\acerca-de.vue",
-    "chunkName": "pages/acerca-de"
+    "chunkName": "pages/acerca-de",
+    "_name": "_cc35501e"
   },
   {
     "name": "lista",
     "path": "/lista",
     "component": "C:\\\\Users\\\\littl\\\\OneDrive\\\\Desktop\\\\TBD\\\\TBD_examples\\\\Shelina\\\\pages\\\\lista.vue",
-    "chunkName": "pages/lista"
+    "chunkName": "pages/lista",
+    "_name": "_cdb09dda"
   },
   {
     "name": "lista-componente",
     "path": "/lista-componente",
     "component": "C:\\\\Users\\\\littl\\\\OneDrive\\\\Desktop\\\\TBD\\\\TBD_examples\\\\Shelina\\\\pages\\\\lista-componente.vue",
-    "chunkName": "pages/lista-componente"
+    "chunkName": "pages/lista-componente",
+    "_name": "_2ed2d5b2"
   },
   {
     "name": "nuevo",
     "path": "/nuevo",
     "component": "C:\\\\Users\\\\littl\\\\OneDrive\\\\Desktop\\\\TBD\\\\TBD_examples\\\\Shelina\\\\pages\\\\nuevo.vue",
-    "chunkName": "pages/nuevo"
+    "chunkName": "pages/nuevo",
+    "_name": "_80533372"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\littl\\\\OneDrive\\\\Desktop\\\\TBD\\\\TBD_examples\\\\Shelina\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_9c23923c"
   }
 ]
