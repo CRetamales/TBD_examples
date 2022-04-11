@@ -1,10 +1,14 @@
 <template>
-  <div class="container">
-    <div>
+  <div class="grid-container">
+    <div class="item1">
       <Logo />
-      <h1 class="title">
-        ejemplo-nuxt
+    </div> <!-- item1 -->
+    <div class="item2">
+      <link href='https://fonts.googleapis.com/css?family=Vibur:400' rel='stylesheet' type='text/css'>
+      <h1 class="title neon flicker">
+        Espada Espiral
       </h1>
+      <div><p><br></p></div>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
@@ -23,11 +27,12 @@
           GitHub
         </a>
       </div>
-    </div>
-  </div>
+    </div> <!-- item2 -->
+  </div> <!-- container -->
 </template>
 
 <script>
+
 export default {}
 </script>
 
@@ -42,24 +47,17 @@ export default {}
 
 .title {
   font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
+    "Vibur";
+  display:grid;
+  font-weight:0px;
   font-size: 100px;
-  color: #35495e;
+  color: #ffffff;
   letter-spacing: 1px;
+  padding-top: 10%
 }
 
 .subtitle {
-  font-weight: 300;
+  font-weight: 100px;
   font-size: 42px;
   color: #526488;
   word-spacing: 5px;
@@ -69,4 +67,66 @@ export default {}
 .links {
   padding-top: 15px;
 }
+
+.neon {
+  color: #fff;
+  animation: flicker 1.5s infinite alternate;
+  text-shadow:
+    0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #ff0000,
+      0 0 82px #ff0000,
+      0 0 92px #ff0000,
+      0 0 102px #ff0000,
+      0 0 151px #ff0000;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.item1 {
+  grid-column: 1 / span 1;
+}
+
+.flicker-slow{
+  animation: flicker 3s linear infinite;
+}
+
+.flicker-fast{
+  animation: flicker 1s linear infinite;
+}
+
+@keyframes flicker {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #ff0000,
+      0 0 82px #ff0000,
+      0 0 92px #ff0000,
+      0 0 102px #ff0000,
+      0 0 151px #ff0000;
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
+}
+
 </style>

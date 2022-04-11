@@ -1,5 +1,6 @@
 [
   {
+<<<<<<< Updated upstream
     "name": "acerca-de",
     "path": "/acerca-de",
     "component": "C:\\\\Users\\\\Carev\\\\Desktop\\\\7°Semestre\\\\TBD\\\\ejemplos\\\\TBD_examples\\\\Shelina\\\\pages\\\\acerca-de.vue",
@@ -7,6 +8,8 @@
     "_name": "_43d35769"
   },
   {
+=======
+>>>>>>> Stashed changes
     "name": "lista",
     "path": "/lista",
     "component": "C:\\\\Users\\\\Carev\\\\Desktop\\\\7°Semestre\\\\TBD\\\\ejemplos\\\\TBD_examples\\\\Shelina\\\\pages\\\\lista.vue",
@@ -19,6 +22,13 @@
     "component": "C:\\\\Users\\\\Carev\\\\Desktop\\\\7°Semestre\\\\TBD\\\\ejemplos\\\\TBD_examples\\\\Shelina\\\\pages\\\\lista-componente.vue",
     "chunkName": "pages/lista-componente",
     "_name": "_24f6018c"
+  },
+  {
+    "name": "nosotros",
+    "path": "/nosotros",
+    "component": "C:\\\\Users\\\\littl\\\\OneDrive\\\\Desktop\\\\TBD\\\\TBD_examples\\\\Shelina\\\\pages\\\\nosotros.vue",
+    "chunkName": "pages/nosotros",
+    "_name": "_301961df"
   },
   {
     "name": "nuevo",
