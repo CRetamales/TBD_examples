@@ -1,0 +1,65 @@
+[
+  {
+    "name": "acerca-de",
+    "path": "/acerca-de",
+    "component": "C:\\\\Users\\\\Carev\\\\Desktop\\\\TesteoTBD\\\\Control2TBD_grupo4\\\\espadaespiral\\\\nuxt-font\\\\pages\\\\acerca-de.vue",
+    "chunkName": "pages/acerca-de",
+    "_name": "_550455b6"
+  },
+  {
+    "name": "actualizar",
+    "path": "/actualizar",
+    "component": "C:\\\\Users\\\\Carev\\\\Desktop\\\\TesteoTBD\\\\Control2TBD_grupo4\\\\espadaespiral\\\\nuxt-font\\\\pages\\\\actualizar.vue",
+    "chunkName": "pages/actualizar",
+    "_name": "_640b3e1c"
+  },
+  {
+    "name": "eliminar",
+    "path": "/eliminar",
+    "component": "C:\\\\Users\\\\Carev\\\\Desktop\\\\TesteoTBD\\\\Control2TBD_grupo4\\\\espadaespiral\\\\nuxt-font\\\\pages\\\\eliminar.vue",
+    "chunkName": "pages/eliminar",
+    "_name": "_e7d31ce6"
+  },
+  {
+    "name": "lista",
+    "path": "/lista",
+    "component": "C:\\\\Users\\\\Carev\\\\Desktop\\\\TesteoTBD\\\\Control2TBD_grupo4\\\\espadaespiral\\\\nuxt-font\\\\pages\\\\lista.vue",
+    "chunkName": "pages/lista",
+    "_name": "_0b522f72"
+  },
+  {
+    "name": "nosotros",
+    "path": "/nosotros",
+    "component": "C:\\\\Users\\\\Carev\\\\Desktop\\\\TesteoTBD\\\\Control2TBD_grupo4\\\\espadaespiral\\\\nuxt-font\\\\pages\\\\nosotros.vue",
+    "chunkName": "pages/nosotros",
+    "_name": "_b4bb23aa"
+  },
+  {
+    "name": "nuevo",
+    "path": "/nuevo",
+    "component": "C:\\\\Users\\\\Carev\\\\Desktop\\\\TesteoTBD\\\\Control2TBD_grupo4\\\\espadaespiral\\\\nuxt-font\\\\pages\\\\nuevo.vue",
+    "chunkName": "pages/nuevo",
+    "_name": "_21059d7b"
+  },
+  {
+    "name": "delete-id",
+    "path": "/delete/id",
+    "component": "C:\\\\Users\\\\Carev\\\\Desktop\\\\TesteoTBD\\\\Control2TBD_grupo4\\\\espadaespiral\\\\nuxt-font\\\\pages\\\\delete\\\\id.vue",
+    "chunkName": "pages/delete/id",
+    "_name": "_01ddf032"
+  },
+  {
+    "name": "update-id",
+    "path": "/update/id",
+    "component": "C:\\\\Users\\\\Carev\\\\Desktop\\\\TesteoTBD\\\\Control2TBD_grupo4\\\\espadaespiral\\\\nuxt-font\\\\pages\\\\update\\\\id.vue",
+    "chunkName": "pages/update/id",
+    "_name": "_9fccb560"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\Carev\\\\Desktop\\\\TesteoTBD\\\\Control2TBD_grupo4\\\\espadaespiral\\\\nuxt-font\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_131d6e16"
+  }
+]

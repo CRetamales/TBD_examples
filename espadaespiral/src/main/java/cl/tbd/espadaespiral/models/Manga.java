@@ -1,91 +1,107 @@
 package cl.tbd.espadaespiral.models;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+@EntityScan
 public class Manga {
     //ATRIBUTOS DE LA ENTIDAD MANGA 
     // id, nombre del manga, autor del manga, capitulo del manga,
     // categoria del manga, editorial del manga, idioma del manga,
     // numero de paginas y precio del manga
     private long id;
-    private String NombreManga;
-    private String AutorManga;
-    private String CategoriaManga;
-    private String EditorialManga;
-    private String IdiomaManga;
-    private int CapituloManga;
-    private int NumeroPaginas;
-    private int PrecioManga;
+    private String nombremanga;
+    private String autormanga;
+    private String categoriamanga;
+    private String editorialmanga;
+    private String idiomamanga;
+    private int capitulomanga;
+    private int numeropaginas;
+    private int preciomanga;
 
-    //aqui empiezan los setters y getters, cierto?
+    //CONSTRUCTOR MANGA
+
+    public Manga (long id, String nombre, String autor, String categoria, String editorial, String idioma, int capitulo, int numeroPaginas, int precio){
+        this.id = id;
+        this.nombremanga = nombre;
+        this.autormanga = autor;
+        this.categoriamanga = categoria;
+        this.editorialmanga = editorial;
+        this.idiomamanga = idioma;
+        this.capitulomanga = capitulo;
+        this.numeropaginas = numeroPaginas;
+        this.preciomanga = precio;
+    }
+
     //GET ID MANGA
     public long getMangaid(){  
         return id;  
     }  
     //SET ID MANGA
-    public void setMangaid(int id){  
+    public void setMangaid(long id){  
         this.id = id;  
     }
     //GET NOMBRE MANGA
     public String getNombreManga(){  
-        return NombreManga;  
+        return nombremanga;  
     }
     //SET ID NOMBRE DE MANGA
     public void setNombreManga(String nombreManga){  
-        this.NombreManga = nombreManga;  
+        this.nombremanga = nombreManga;  
     }  
     //GET NOMBRE AUTOR
     public String getAutorManga(){  
-        return AutorManga;  
+        return autormanga;  
     } 
     //SET AUTOR MANGA
     public void setAutor(String autorManga){  
-        this.AutorManga = autorManga;  
+        this.autormanga = autorManga;  
     }
     //GET CATEGORIA MANGA
     public String getCategoriaManga() {
-        return CategoriaManga;
+        return categoriamanga;
     }
     // SET CATEGORIA MANGA
     public void setCategoriaManga(String categoriaManga){
-        this.CategoriaManga = categoriaManga;
+        this.categoriamanga = categoriaManga;
     }
     //GET EDITORIAL MANGA
     public String getEditorialManga(){
-        return EditorialManga;
+        return editorialmanga;
     }
     //SET EDITORIAL MANGA
     public void setEditorialManga(String editorialManga){
-        this.EditorialManga = editorialManga;
+        this.editorialmanga = editorialManga;
     }
     //GET IDIOMA MANGA
     public String getIdiomaManga(){
-        return IdiomaManga;
+        return idiomamanga;
     }
     //SET IDIOMA MANGA
     public void setIdiomaManga(String idiomaManga){
-        this.IdiomaManga = idiomaManga;
+        this.idiomamanga = idiomaManga;
     }
     //GET CAPITULO MANGA  
     public int getCapituloManga(){  
-        return CapituloManga;  
+        return capitulomanga;  
     }
     //SET CAPITULO MANGA
     public void setCapituloManga(int capituloManga){  
-        this.CapituloManga = capituloManga;
+        this.capitulomanga = capituloManga;
     }
     //GET NUMERO DE PAGINAS MANGA
     public int getNumeroPaginas(){
-        return NumeroPaginas;
+        return numeropaginas;
     }
     //SET NUMERO DE PAGINAS MANGA
     public void setNumeroPaginas(int numeroPaginas){
-        this.NumeroPaginas = numeroPaginas;
+        this.numeropaginas = numeroPaginas;
     }
     //GET PRECIO MANGA
     public int getPrecioManga(){
-        return PrecioManga;
+        return preciomanga;
     }
     //SET PRECIO MANGA
     public void setPrecioManga(int precioManga){  
-        this.PrecioManga = precioManga;  
+        this.preciomanga = precioManga;  
     } 
 }
